@@ -1,0 +1,42 @@
+h1,h2,h3,h4{
+	font-weight: 100;
+}
+
+h1{
+	font-size: 60pt;
+}
+
+h2{
+	font-size: 30pt;	
+}
+
+h3{
+	font-size: 20pt;
+}
+
+#wrapper{
+	position: absolute;
+	left:0px;
+	top:0px;
+	width: 100%;
+	height: 100%;
+
+
+
+
+	#header{
+		position: relative;
+		height: 30%;
+		width: 100%;
+		background-color: #eee;
+		border-bottom: 1px solid #ddd;
+
+		h1{
+			position: absolute;
+			left:0px;
+			bottom:20px;
+			width: 100%;
+			text-align: center;
+		}
+	}
+}
