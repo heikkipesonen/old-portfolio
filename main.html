@@ -6,12 +6,236 @@
 	<body>
 		<div id="wrapper">
 
+			<div id="indicator">
+				<div data-target="left" class="item sliderButton"></div>
+				<div data-target="center" class="item sliderButton"></div>
+				<div data-target="right" class="item sliderButton"></div>
+			</div>
 
-				<div id="header">
-					<h1>Heikki Pesonen</h1>
+			<div id="slider" class="center">
+			
+				<div id="cv" class="page">
+					<div class="sliderButton backbutton right" data-target="center">
+						<i class="fa fa-angle-right"></i>
+					</div>
+
+					<div class="container" id="cv-scroll">
+						<div class="content">
+							
+										
+							<div class="header">				
+								<h1>CV</h1>
+							</div>
+
+							<div class="box">							
+								<h2>Minä</h2>
+
+								<figure>
+									<img src="" alt="">
+								</figure>
+
+								<div class="container">
+									<p>Heikki Pesonen</p>
+									<p>23.10.1981, Enossa, Pohjois-karjalassa</p>						
+									<p>Avoliitossa</p>
+									<p>Vantaalla</p>									
+								</div>
+
+								<div class="container">
+									<p>Olen juuri valmistuva mediatekniikan opiskelija, ammattitaitoni on front-end kehityksessä, javascriptissä ja css:sä, toki myös php, mysql ovat tuttuja tapauksia. Myös javaan & android sovelluskehitykseen olen tullut tutustuneeksi.</p>
+
+									<p>Aiemmin olen työskennellyt front-end kehittäjänä, muuttanut mummoja, vaihtanut mattoja, ajanut taksia, tehnyt freelance-töitä, sahannut sahalla, sekä ajanut miljoonan isolla autolla.</p>
+
+									<p>Ennen kaikkea, haluan oppia uutta ja tehdä hyvää jälkeä.</p>
+								</div>
+							</div>
+
+							
+							<div class="box">
+								<h2>Osaaminen</h2>
+
+								<ul id="osaaminen" class="container">
+									
+									<li><p>HTML</p></li>
+									<li><p>Javascript</p></li>
+									<li><p>CSS / Sass</p></li>
+									<li><p>PHP</p></li>
+									<li><p>MySQL</p></li>								
+									<li><p>Java</p></li>
+									<li><p>Android</p></li>
+									<li><p>Git</p></li>
+									
+									
+									<li><p>Adobe Photoshop</p></li>
+									<li><p>Adobe Premiere</p></li>
+									<li><p>3DS Max</p></li>
+
+									
+									<li><p>Huumori eri muodoissa</p></li>
+									
+								</ul>
+							</div>
+
+							<div class="box">
+								<h2>Kielitaito</h2>
+								<ul id="kielitaito">
+									<li>Suomi</li>
+									<li>Englanti</li>
+									<li>Ruotsi - heikko</li>									
+								</ul>
+							</div>
+
+							<div class="box">
+								<h2>Koulutus</h2>
+								<ul id="school-list" class="container">										
+									<li>
+										<span class="time">2010 - 2014</span>
+										<div class="container">											
+											<h4>Metropolia Ammattikorkeakoulu</h4>
+											<p>Mediatekniikan koulutusohjelma, digitaalinen tekniikka</p>						
+											<p>Insinööri</p>				
+										</div>
+									</li>								
+									<li>
+										<span class="time">2004 - 2006</span>
+										<div class="container">											
+											<h4>Mikkelin Ammattikorkeakoulu</h4>
+											<p>Puumuotoilun koulutusohjelma</p>						
+											<p>Artenomi</p>
+											<p>Suoritettu noin 50%</p>
+										</div>
+									</li>								
+									<li>
+										<span class="time">1998 - 2002</span>
+										<div class="container">											
+											<h4>Enon Lukio</h4>
+											<p>Ylioppilastutkinto</p>						
+										</div>
+									</li>								
+								</ul>
+							</div>
+
+
+							<div class="box">							
+								<h2>Työkokemus</h2>
+								<ul id="job-list" class="container">
+									<li>
+										<span class="time">10.2013 - 12.2013</span>
+										<div class="container">
+											<h4>Luotta Oy</h4>
+											<p>Front-end developer</p>
+											<p>Työskentelin front-end developerina Luotta OY:ssä syksyn 2013 aikana. Tehtäviini kuului pääasiassa sivustojen ulkoasun toteuttaminen css & javascriptillä. Tein töitä myös php:n & mySql:n parissa.</p>
+										</div>
+									</li>
+
+									<li>
+										<span class="time">1.2013 - 9.2013</span>
+										<div class="container">
+											<h4>Metropolia Ammattikorkeakoulu - eReading</h4>
+											<p>Tutkimusavustaja</p>
+											<p>Metropolian ereading projektissa toimin tutkimusavustaja-nimikkeellä. Aluksi tehtävänäni oli toteuttaa sähköinen lehdenlukija sovellus kosketuskäyttöisille laitteille, tämän jälkeen toteutin erilaisia pieniä web-pohjaisia demo-sovelluksia eri tarkoituksiin</p>
+											<p>Ohjelmointikielinä käytin javascriptiä, php:tä sekä javaa</p>
+										</div>
+									</li>
+
+									<li>
+										<span class="time">5.2012 - 12.2012</span>
+										<div class="container">											
+											<h4>Metropolia Ammattikorkeakoulu</h4>
+											<p>Tutkimusavustaja</p>
+											<p>Totetutin yhteistyössä pääkaupunkiseudun museoiden kanssa selainpohjaista karttasovellusta käytettäväksi suurilla kosketusnäytöillä. Sovelluksen tarkoitus oli olla työkalu, jolla museoiden työntekijät pystyisivät itse rakentamaan paikkatietoon perustuvia esityksiä joita museot voivat esittää kävijöille joko museoissa tai kotona.</p>
+											<p>Ohjelmointikielinä javascript sekä php</p>
+										</div>
+									</li>
+
+									<li>
+										<span class="time">3.2007 - 10.2012</span>
+										<div class="container">											
+											<h4>Kuljetus Oy Jussi</h4>
+											<p>Autonkuljettaja</p>
+											<p>Toimin vaihtolava-nosturiauton kuljettajana Kuljetus Oy Jussin palveluksessa noin 5v ajan. Pääasiassa työtehtävät muodoistuivat rakennusjätteen, rakennustarvikkeiden sekä erilaisten koneiden kuljetuksista pääkaupunkiseudulla.</p>
+										</div>
+									</li>
+									<li>
+										<span class="time">10.2006 - 3.2007</span>
+										<div class="container">											
+											<h4>Urakointi Harri Johansson OY</h4>
+											<p>Autonkuljettaja</p>
+											<p>Jakeluauton kuljettajana toimiminen. Työ oli lindströmin tuotteiden, mattojen, käsipyyhkeiden sekä työvaatteiden jakelua pääkaupunkiseudulla.</p>
+										</div>
+									</li>
+									<li>
+										<span class="time">8.2006 - 10.2006</span>
+										<div class="container">											
+											<h4>Muuttomiehet K. Niskanen Oy</h4>
+											<p>Muuttomies / Autonkuljettaja</p>
+											<p>Toimin kokopäiväisenä muuttomiehenä Muuttomiehet K. Niskanen Oy:ssä, työ oli pääasiassa yksityishenkilöiden muuttokuljetusten suorittamista.</p>
+										</div>
+									</li>
+									<li>
+										<span class="time">6.2006 - 8.2006</span>
+										<div class="container">											
+											<h4>TJP-lines Oy</h4>
+											<p>Autonkuljettaja</p>
+											<p>Inva-varustellun tilataksin kuljettaja. Suurimmaksi osaksi helsingin matkapalvelukeskuksen tarjoamia ajoja, mutta myös koulukyydityksiä sekä satunnaisia muita ajoja</p>
+										</div>
+									</li>	
+									<div class="clear"></div>
+								</ul>
+							</div>
+
+						</div>
+					</div>
 				</div>
 
+				<div id="frontpage" class="page">
+					
+					<div class="header">
+						<h1>Heikki Pesonen</h1>
+					</div>
+					<nav id="frontpage-nav">
+						<ul>
+							<li class="sliderButton" data-target="left">
+								<div class="content">								
+									<figure>
+										<i class="fa fa-print"></i>
+									</figure>
 
+									<h3>C.V.</h3>
+									<p>Curriculum Vitae. Tehdyt työt, käydyt koulut, koetut paikat.</p>
+								</div>
+							</li>
+							
+							<li class="sliderButton" data-target="right">
+								<div class="content">
+									<figure>
+										<i class="fa fa-tag"></i>
+									</figure>
+									
+									<h3>Portfolio</h3>
+									<p>Referenssit. Työt, teokset, suunnitelmat, luonnokset.</p>
+								</div>
+							</li>
+
+						</ul>
+						<div class="clear"></div>
+					</nav>
+				</div>
+
+				<div id="portfolio" class="page">
+					<div class="sliderButton backbutton left" data-target="center">
+						<i class="fa fa-angle-left"></i>
+					</div>
+
+					<div class="header">						
+						<h1>Portfolio</h1>
+					</div>
+					
+				</div>
+			
+	
+				<div class="clear"></div>
+			</div>
 
 
 		</div>
