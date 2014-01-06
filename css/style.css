@@ -2,7 +2,7 @@
 html {
   font-family: 'Raleway', sans-serif; }
 
-.animate, #wrapper #slider, #wrapper #indicator, #wrapper #indicator .item, #wrapper nav#frontpage-nav ul li {
+.animate, #wrapper #indicator, #wrapper #indicator .item, #wrapper nav#frontpage-nav ul li, .listIcon, #portfolio .box ul li a.github:after, #portfolio .box ul li a.video:after, #portfolio .box ul li figure {
   -webkit-transition-duration: 0.2s;
   -moz-transition-duration: 0.2s;
   -ms-transition-duration: 0.2s;
@@ -13,6 +13,28 @@ html {
   -ms-transition-timing-function: ease-in-out;
   -o-transition-timing-function: ease-in-out;
   transition-timing-function: ease-in-out; }
+
+figure {
+  -webkit-margin-before: 0;
+  -moz-margin-before: 0;
+  -ms-margin-before: 0;
+  -o-margin-before: 0;
+  margin-before: 0;
+  -webkit-margin-after: 0;
+  -moz-margin-after: 0;
+  -ms-margin-after: 0;
+  -o-margin-after: 0;
+  margin-after: 0;
+  -webkit-margin-start: 0;
+  -moz-margin-start: 0;
+  -ms-margin-start: 0;
+  -o-margin-start: 0;
+  margin-start: 0;
+  -webkit-margin-end: 0;
+  -moz-margin-end: 0;
+  -ms-margin-end: 0;
+  -o-margin-end: 0;
+  margin-end: 0; }
 
 h1, h2, h3, h4 {
   font-weight: 100; }
@@ -34,6 +56,12 @@ h3 {
 h4 {
   font-size: 16pt;
   font-weight: 400; }
+
+a {
+  text-decoration: none;
+  color: #000; }
+  a:visited {
+    color: #000; }
 
 #wrapper {
   position: absolute;
@@ -57,7 +85,12 @@ h4 {
     position: absolute;
     top: 0px;
     width: 300%;
-    height: 100%; }
+    height: 100%;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -ms-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-duration: 0.3s; }
     #wrapper #slider.center {
       -webkit-transform: translate3d(-33.333%,0,0);
       -moz-transform: translate3d(-33.333%,0,0);
@@ -174,6 +207,16 @@ i {
 p {
   margin-top: 15px; }
 
+.close {
+  background-color: #54aec5;
+  height: 60px;
+  width: 60px;
+  text-align: center;
+  cursor: pointer; }
+  .close i {
+    font-size: 42px;
+    margin-top: 10px; }
+
 .box {
   position: relative;
   width: 90%;
@@ -192,13 +235,16 @@ p {
   .box .container {
     padding: 20px; }
 
-#cv > .container {
+#cv > .container, #portfolio > .container {
   position: relative;
-  width: 80%;
-  height: 100%;
-  margin-left: 10%; }
-  #cv > .container > .content {
+  width: 100%;
+  height: 100%; }
+  #cv > .container > .content, #portfolio > .container > .content {
     padding-bottom: 150px; }
+
+#cv > .container > .content {
+  width: 80%;
+  margin-left: 10%; }
 
 ul#osaaminen {
   text-align: left; }
@@ -253,3 +299,169 @@ ul li:not(:first-child) {
   
   
   */ }
+
+#overlay {
+  -webkit-transition-duration: 0.4s;
+  -moz-transition-duration: 0.4s;
+  -ms-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.3); }
+  #overlay.hidden {
+    opacity: 0;
+    z-index: -1; }
+
+#fullviewer {
+  -webkit-transition-duration: 0.4s;
+  -moz-transition-duration: 0.4s;
+  -ms-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  height: 100%;
+  width: 80%;
+  background-color: #fff;
+  z-index: 10;
+  box-shadow: 0px 20px 70px -10px rgba(0, 0, 0, 0.3);
+  /*
+  	&:before{
+  		content: "";
+  		position:absolute;
+  		left: -32px;
+  		top:50%;
+  		margin-top: -32px;
+  		border-top: 32px solid transparent;
+  		border-bottom: 32px solid transparent;
+  		border-right: 32px solid #fff;
+  	}
+  */ }
+  #fullviewer.hidden {
+    right: -100%; }
+  #fullviewer .fullview {
+    position: relative;
+    width: 100%;
+    padding-top: 100px;
+    padding-bottom: 100px; }
+    #fullviewer .fullview figure {
+      margin-left: 10%;
+      width: 80%; }
+      #fullviewer .fullview figure img {
+        width: 100%; }
+      #fullviewer .fullview figure figcaption {
+        margin-left: 10%;
+        width: 80%;
+        margin-top: 20px;
+        margin-bottom: 20px; }
+    #fullviewer .fullview .images {
+      position: relative;
+      text-align: center;
+      width: 90%;
+      margin-left: 5%; }
+      #fullviewer .fullview .images.half figure {
+        width: 44%;
+        margin-left: 5%;
+        display: inline-block; }
+    #fullviewer .fullview p {
+      width: 80%;
+      margin-left: 10%;
+      margin-bottom: 50px;
+      margin-top: 50px; }
+    #fullviewer .fullview h2 {
+      position: relative; }
+    #fullviewer .fullview .close {
+      position: absolute;
+      top: 100px;
+      left: -60px; }
+
+.listIcon, #portfolio .box ul li a.github:after, #portfolio .box ul li a.video:after {
+  position: absolute;
+  font-family: fontAwesome;
+  left: 50%;
+  top: 50%;
+  font-size: 128px;
+  width: 128px;
+  height: 128px;
+  margin-left: -64px;
+  margin-top: -64px;
+  color: #7ac0d2;
+  text-shadow: 0px 0px 55px rgba(0, 0, 0, 0.3);
+  z-index: 10; }
+
+#portfolio .box ul {
+  position: relative;
+  text-align: center; }
+  #portfolio .box ul li {
+    margin: 5px;
+    padding: 10px;
+    text-align: left;
+    width: 300px;
+    height: 420px;
+    display: inline-block;
+    vertical-align: top;
+    overflow: hidden;
+    margin-top: 20px;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -ms-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-duration: 0.3s; }
+    #portfolio .box ul li a {
+      width: 100%;
+      height: 100%; }
+      #portfolio .box ul li a.github:after {
+        content: "\f09b";
+        opacity: 0; }
+      #portfolio .box ul li a.video:after {
+        content: "\f03d";
+        opacity: 0; }
+      #portfolio .box ul li a:hover:after {
+        opacity: 1; }
+      #portfolio .box ul li a:hover figure {
+        opacity: 0.5; }
+    #portfolio .box ul li:hover {
+      cursor: pointer;
+      box-shadow: 0px 0px 70px -30px black; }
+    #portfolio .box ul li .fullview {
+      display: none; }
+    #portfolio .box ul li figure {
+      position: relative;
+      width: 100%;
+      height: 200px;
+      overflow: hidden; }
+      #portfolio .box ul li figure figcaption {
+        display: block;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-size: 16pt;
+        background-color: rgba(84, 174, 197, 0.6);
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+        color: #fff;
+        text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+        /*
+        */
+        font-weight: 700;
+        text-align: center;
+        text-transform: uppercase; }
+      #portfolio .box ul li figure img {
+        min-width: 100%;
+        min-height: 100%; }
+    #portfolio .box ul li span {
+      font-size: 14pt;
+      font-weight: 700;
+      margin-right: 10px;
+      white-space: nowrap;
+      color: #54aec5; }
+    #portfolio .box ul li p {
+      word-wrap: break-word;
+      padding: 20px; }

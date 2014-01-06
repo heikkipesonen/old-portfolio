@@ -17,6 +17,13 @@ $default-prefixes: webkit moz ms o;
 	@include prefix('transition-timing-function','ease-in-out');
 }
 
+figure{
+	@include prefix('margin-before',0);
+	@include prefix('margin-after',0);
+	@include prefix('margin-start',0);
+	@include prefix('margin-end',0);
+}
+
 $iconColor: #fff;
 $theColor: #54AEC5;
 
@@ -47,7 +54,13 @@ h4{
 }
 
 
-
+a{
+	text-decoration: none;
+	color: #000;
+	&:visited{
+		color: #000;
+	}
+}
 
 #wrapper{
 	
@@ -80,7 +93,7 @@ h4{
 		top:0px;
 		width: 300%;		
 		height: 100%;
-		@extend .animate;
+		@include prefix('transition-duration','0.3s');
 
 		&.center{
 			@include prefix('transform','translate3d(-33.333%,0,0)');
@@ -245,3 +258,15 @@ p{
 	margin-top: 15px;
 }
 
+.close{
+	background-color: $theColor;
+	height: 60px;
+	width: 60px;
+	text-align: center;
+	cursor: pointer;
+
+	i{
+		font-size: 42px;
+		margin-top: 10px;
+	}
+}
